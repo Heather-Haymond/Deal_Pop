@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Deal Pop",
+    "version": "1.0",
+    "description": "Web scraping and item tracking",
+    "permissions": ["activeTab"], 
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
