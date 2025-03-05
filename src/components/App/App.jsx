@@ -21,6 +21,8 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 
 import './App.css';
+import './tailwind.css'; 
+
 
 function App() {
   const dispatch = useDispatch();
