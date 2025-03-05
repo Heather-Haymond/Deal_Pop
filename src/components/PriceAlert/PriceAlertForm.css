@@ -1,0 +1,39 @@
+/* Container */
+ .price-alert-form {
+    @apply bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto mt-6;
+  }
+  
+  /* Title  */
+  .form-title {
+    @apply text-xl font-semibold mb-4;
+  }
+  
+  /* Current Price Text */
+  .current-price {
+    @apply mb-4 text-gray-700;
+  }
+  
+  /* Input Group */
+  .input-group {
+    @apply mb-4;
+  }
+  
+  /* Label */
+  .input-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  /* Input Field */
+  .input-field {
+    @apply w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500;
+  }
+
+  /* Submit Button */
+  .submit-button {
+    @apply w-full bg-pink-500 text-white py-3 rounded-md hover:bg-pink-600 focus:outline-none;
+  }
+  
+  /* Error Message */
+  .error-message {
+    @apply text-red-500 text-sm mt-2;
+  }

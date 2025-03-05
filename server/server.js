@@ -1,4 +1,7 @@
 const express = require('express');
+const axios = require("axios");
+const cron = require("node-cron");
+
 const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 5001;
@@ -9,6 +12,7 @@ const passport = require('./strategies/user.strategy');
 
 // Route Includes
 const userRouter = require('./routes/user.router');
+const scraperRouter = require('./routes/scraper.router');
 
 // Express Middleware
 app.use(express.json());
@@ -24,6 +28,11 @@ app.use(passport.session());
 
 // Routes
 app.use('/api/user', userRouter);
+app.use('/api/scraper', scraperRouter);
+
+// Cron Job to Scrape Prices Every 30 Minutes
+const { startPriceScraping } = require('./services/scheduler'); 
+startPriceScraping();
 
 // Listen Server & Port
 app.listen(PORT, () => {
